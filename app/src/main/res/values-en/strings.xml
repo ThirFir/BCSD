@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">bcsd_week3</string>
+    <string name="kakao_talk">KaKaoTalk</string>
+    <string name="hint_input_id">Input ID</string>
+    <string name="hint_input_password">Input Password</string>
+    <string name="text_id">ID</string>
+    <string name="text_password">PASSWORD</string>
+    <string name="text_register">Sign up</string>
+    <string name="text_login">Sign in</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">bcsd_week3</string>
+    <string name="kakao_talk">카카오톡</string>
+    <string name="hint_input_id">아이디를 입력하세요</string>
+    <string name="hint_input_password">비밀번호를 입력하세요</string>
+    <string name="text_id">아이디</string>
+    <string name="text_password">비밀번호</string>
+    <string name="text_register">회원가입</string>
+    <string name="text_login">로그인</string>
+</resources>
