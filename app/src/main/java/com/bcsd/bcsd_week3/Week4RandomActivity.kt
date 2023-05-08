@@ -1,18 +1,20 @@
+/*
+
 package com.bcsd.bcsd_week3
+
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.bcsd.bcsd_week3.databinding.ActivityWeek4Binding
-import com.bcsd.bcsd_week3.databinding.ActivityWeek4RandomBinding
+import com.bcsd.bcsd_week3.databinding.ActivityWeek5Binding
 import kotlin.random.Random
 
 class Week4RandomActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityWeek4RandomBinding
+    private lateinit var binding: ActivityWeek5RandomBinding
     var random: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityWeek4RandomBinding.inflate(layoutInflater)
+        binding = ActivityWeek5RandomBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val r = intent.getIntExtra("count", 1)
@@ -27,3 +29,5 @@ class Week4RandomActivity : AppCompatActivity() {
         super.onDestroy()
     }
 }
+
+*/
