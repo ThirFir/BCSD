@@ -24,12 +24,12 @@ class Week5MainFragment : Fragment() {
         binding.buttonToast.setOnClickListener {
             //Toast.makeText(this@Week4Activity, "Toast : ${binding.textCountNumber.text}", Toast.LENGTH_SHORT).show()
             AlertDialog.Builder(requireContext()).setMessage(count.toString())
-                .setPositiveButton("OK"){
-                        _, _ -> count = 0; binding.textCountNumber.text = "0"
+                .setPositiveButton("OK") { _, _ ->
+                    count = 0; binding.textCountNumber.text = "0"
                 }
                 .setNegativeButton("Cancel", null)
-                .setNeutralButton("Neutral") {
-                        _, _ -> Toast.makeText(requireContext(), "NEUTRAL", Toast.LENGTH_SHORT).show()
+                .setNeutralButton("Neutral") { _, _ ->
+                    Toast.makeText(requireContext(), "NEUTRAL", Toast.LENGTH_SHORT).show()
                 }.show()
         }
         binding.buttonCount.setOnClickListener {
@@ -38,12 +38,11 @@ class Week5MainFragment : Fragment() {
         }
 
         binding.buttonRandom.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.layout_week5_activity, Week5Fragment().apply {
-                arguments = bundleOf("count" to count)
-            }, "tag").addToBackStack("tag").commit()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.layout_week5_activity, Week5Fragment().apply {
+                    arguments = bundleOf("count" to count)
+                }, "tag").addToBackStack("tag").commit()
         }
-
         return binding.root
     }
-
 }
