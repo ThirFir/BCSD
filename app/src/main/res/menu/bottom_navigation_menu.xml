@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- add menu item -->
+    <item
+        android:id="@+id/navigation_first"
+        android:icon="@drawable/baseline_mobile_screen_share_48"
+        android:title="First" />
+    <item
+        android:id="@+id/navigation_second"
+        android:icon="@drawable/baseline_format_list_numbered_rtl_48"
+        android:title="Second" />
+    <item
+        android:id="@+id/navigation_third"
+        android:icon="@drawable/baseline_sort_by_alpha_48"
+        android:title="Third" />
+</menu>

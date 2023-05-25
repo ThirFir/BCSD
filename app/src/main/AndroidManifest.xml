@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Bcsd_week3"
         tools:targetApi="31">
         <activity
+            android:name=".Week6Activity"
+            android:exported="false" />
+        <activity
             android:name=".Week5Activity"
             android:exported="false" />
         <activity
@@ -21,7 +24,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Week6Activity"
+            android:name=".week7.Week7Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
