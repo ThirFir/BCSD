@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".week10.Week10Activity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_music"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_music_control"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:background="@color/purple_gray_2"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_view_music"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/image_view_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/baseline_music_video_48"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintTop_toTopOf="@id/image_view_album"
+            app:layout_constraintStart_toEndOf="@id/image_view_album"/>
+
+        <TextView
+            android:id="@+id/text_view_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Artist"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/text_view_title"
+            app:layout_constraintTop_toBottomOf="@id/text_view_title"/>
+
+
+        <ImageView
+            android:id="@+id/icon_play"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_play_arrow_48"
+            app:layout_constraintTop_toTopOf="@id/icon_reset"
+            app:layout_constraintBottom_toBottomOf="@id/icon_reset"
+            app:layout_constraintEnd_toEndOf="@id/icon_pause"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/icon_pause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:src="@drawable/baseline_pause_48"
+            app:layout_constraintTop_toTopOf="@id/icon_reset"
+            app:layout_constraintBottom_toBottomOf="@id/icon_reset"
+            app:layout_constraintEnd_toStartOf="@id/icon_reset"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/icon_reset"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baseline_square_48"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
