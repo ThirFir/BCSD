@@ -12,4 +12,6 @@
 
     <string name="channel_id" translatable="false">Notification Channel Id</string>
     <string name="channel_name" translatable="false">Notification Channel Name</string>
+    <string name="input_word_name">단어</string>
+    <string name="meaning">뜻</string>
 </resources>
