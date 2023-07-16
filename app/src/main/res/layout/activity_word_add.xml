@@ -7,15 +7,38 @@
     android:padding="20dp"
     tools:context=".week12.WordAddActivity">
 
+    <ImageView
+        android:id="@+id/image_view_word_added"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/baseline_image_200"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="?attr/materialButtonOutlinedStyle"
+        android:id="@+id/button_add_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_view_word_added"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="이미지 추가" />
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_word_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/input_word_name"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/button_add_image">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

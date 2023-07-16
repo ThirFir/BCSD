@@ -22,7 +22,6 @@ class WordsViewModel(private val wordRepository: WordRepository): ViewModel() {
         viewModelScope.launch {
             list.addAll(wordRepository.getWordList())
             _wordList.value = list
-            Log.d("Week12Activity", "list: $list")
         }
     }
 

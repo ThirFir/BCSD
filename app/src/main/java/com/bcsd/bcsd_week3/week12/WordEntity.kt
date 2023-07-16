@@ -8,4 +8,5 @@ data class WordEntity(
     @PrimaryKey val name: String,
     val meaning: String,
     val createdAt: Long,
+    val imageUri: String? = null
 )
