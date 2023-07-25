@@ -14,4 +14,5 @@
     <string name="channel_name" translatable="false">Notification Channel Name</string>
     <string name="input_word_name">단어</string>
     <string name="meaning">뜻</string>
+    <string name="input_search_user">검색어 입력</string>
 </resources>

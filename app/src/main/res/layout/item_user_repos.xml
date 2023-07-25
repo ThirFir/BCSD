@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/text_view_repository_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repository Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_repository_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_view_repository_name"
+        app:layout_constraintStart_toStartOf="@id/text_view_repository_name"
+        android:layout_marginTop="10dp"
+        android:text="Repository Description"/>
+
+    <ImageView
+        android:id="@+id/image_view_star"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text_view_repository_description"
+        app:layout_constraintStart_toStartOf="@id/text_view_repository_description"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/star"/>
+
+    <TextView
+        android:id="@+id/text_view_stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/image_view_star"
+        app:layout_constraintTop_toTopOf="@id/image_view_star"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_star"
+        android:text="0"
+        android:layout_marginStart="6dp"/>
+
+    <ImageView
+        android:id="@+id/image_view_fork"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/text_view_stars"
+        app:layout_constraintTop_toTopOf="@id/text_view_stars"
+        app:layout_constraintBottom_toBottomOf="@id/text_view_stars"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/fork"/>
+
+    <TextView
+        android:id="@+id/text_view_forks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/image_view_fork"
+        app:layout_constraintTop_toTopOf="@id/image_view_fork"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_fork"
+        android:text="0"
+        android:layout_marginStart="6dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
