@@ -5,9 +5,8 @@ import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 import java.util.concurrent.TimeUnit
 
@@ -23,20 +22,29 @@ object ApiClient {
 
     var gson = GsonBuilder().setLenient().create()
 
-    val retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create(gson))
-        .client(okHttpClient)
-        .build()
-
+    val retrofit : Retrofit by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .client(okHttpClient)
+            .build()
+    }
     val apiService: ApiService by lazy { retrofit.create(ApiService::class.java) }
 }
 
 interface ApiService {
-    @GET("search/users")
-    fun searchUsers(
-        @Query("q") name: String,
+    @GET("search/repositories")
+    fun searchRepositories(
+        @Query("q") repoName: String,
         @Query("page") page: Int,
         @Query("per_page") perPage: Int = ApiClient.PER_PAGE,
-    ): Call<GithubUserDTO>
+    ): Call<GithubRepositoriesDTO>
+
+    @GET("users/{login}/repos")
+    fun getUserRepositories(
+        @Path(value = "login") login: String,
+        @Query("page") page: Int,
+        @Query("per_page") perPage: Int = ApiClient.PER_PAGE,
+    ): Call<List<GithubRepositoryDTO>>
+
 }
